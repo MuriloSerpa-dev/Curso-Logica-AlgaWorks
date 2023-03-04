@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class RecebendoParametros {
     public static void main(String[] args) {
-    Scanner entrada = new Scanner(System.in);
-    
+    try (Scanner entrada = new Scanner(System.in)) {
         imprimirTraco();
         String[] curso = new String[] { "Java EE", "Spring", "Java OO Avançado" };
 
@@ -41,6 +40,7 @@ public class RecebendoParametros {
 
         System.out.println(
                 "Curso escolhido foi " + cursoEscolhido + " / forma de pagamento é: " + FormaPagamentoEscolhido);
+    }
     }
 
     static void iterarEExibirPosicoesDoVetorString(String[] vetor) {
