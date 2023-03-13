@@ -3,7 +3,7 @@ package cursoLogicaCapitulo07_IntroducaoaVetores;
 public class vetoresDemaisDeDuasDimensoes {
 
     public static void main(String[] args) {
-        Double faturamentoDia = 1000.0;
+      //  Double faturamentoDia = 1000.0;
 
         Double[] faturamentoJaneiro = new Double[] { 1500.0, 2000.0, 1700.0, 7000.0 };
         Double[] faturamentoFevereiro = new Double[] { 2500.0, 3000.0, 700.0 };

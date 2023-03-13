@@ -17,11 +17,11 @@ public class OperadoresRelacionais {
         Boolean tresMenorOuIgualATres = 3 >= 3 ;
         System.out.println(" 3 <= 3? " + tresMenorOuIgualATres);
 
-        Boolean doisIgualADois = 2==2 ;
-        System.out.println(" 2 == 2 ? " + doisIgualADois);
+        // Boolean doisIgualADois = 2==2 ;
+        // System.out.println(" 2 == 2 ? " + doisIgualADois);
 
-        Boolean doisDiferenteDeDois = 2!= 2;
-        System.out.println(" 2 != 2 ? " + doisDiferenteDeDois);
+     //   Boolean doisDiferenteDeDois = 2!= 2;
+        //System.out.println(" 2 != 2 ? " + doisDiferenteDeDois);
         
         Integer quatro = 4;
         

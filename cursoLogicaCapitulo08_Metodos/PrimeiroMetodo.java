@@ -17,7 +17,6 @@ public class PrimeiroMetodo {
 
             Boolean posicaoValida = posicaoEScolhidaCurso >= 0 && posicaoEScolhidaCurso < curso.length;
 
-
             if (!posicaoValida) {
                 encerrarOpcaoCasoInvalida();
             }

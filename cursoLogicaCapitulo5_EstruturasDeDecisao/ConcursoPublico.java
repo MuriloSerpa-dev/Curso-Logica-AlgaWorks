@@ -6,7 +6,7 @@ public class ConcursoPublico {
     static final Integer NOTA_MINIMA_DE_CORTE = 150;
     static final Integer NOTA_MINIMA_MATERIA_INDIVIDUAL = 60;
     public static void main(String[] args) {
-       Scanner entrada = new Scanner(System.in);
+       try (Scanner entrada = new Scanner(System.in)) {
         System.out.println("Digite o valor de sua nota de Portugues: ");
         Double notaPortugues = entrada.nextDouble();
 
@@ -27,5 +27,6 @@ public class ConcursoPublico {
         } else {
             System.out.println(" Aluno reprovado ");
         }
+    }
     }
 }

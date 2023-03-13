@@ -1,7 +1,5 @@
 package cursoLogicaCapitulo07_IntroducaoaVetores;
 
-import java.util.Scanner;
-
 public class Vetores1Dimensao {
     public static void main(String[] args) {
 

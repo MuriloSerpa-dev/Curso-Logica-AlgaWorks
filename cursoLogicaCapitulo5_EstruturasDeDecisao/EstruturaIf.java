@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class EstruturaIf {
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
+        try (Scanner entrada = new Scanner(System.in)) {
+        }
 
         Double emprestimo = 4.000;
         Double movimentacaoMedia = 2.000;

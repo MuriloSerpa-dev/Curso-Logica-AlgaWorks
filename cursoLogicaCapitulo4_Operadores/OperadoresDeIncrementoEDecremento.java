@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class OperadoresDeIncrementoEDecremento {
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
+        try (Scanner entrada = new Scanner(System.in)) {
+        }
 
         /*
          * Integer numero = 10;

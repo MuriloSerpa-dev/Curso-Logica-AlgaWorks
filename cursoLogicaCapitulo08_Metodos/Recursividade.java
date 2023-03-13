@@ -2,7 +2,7 @@ package cursoLogicaCapitulo08_Metodos;
 
 import java.util.Scanner;
 
-public class RetornandoValores {
+public class Recursividade {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
@@ -24,7 +24,7 @@ public class RetornandoValores {
         String[] formaDePagamento = new String[] { "Cartão", "Boleto" };
 
         // imprimirContinuarMesmaLinha(" Digite a forma de pagamento desejada: ");
-         iterarEExibirPosicoesDoVetorString(formaDePagamento);
+        iterarEExibirPosicoesDoVetorString(formaDePagamento);
 
         Integer pagamentoEscolhido = receberNumeroInteiro(" Digite a forma de pagamento escolhida", entrada);
         posicaoValida = verificarPosicaoEscolhida(pagamentoEscolhido, formaDePagamento);
@@ -39,6 +39,17 @@ public class RetornandoValores {
         imprimir(
                 "Curso escolhido foi " + cursoEscolhido + " / forma de pagamento é: " + FormaPagamentoEscolhido);
     }
+    // String[] alunos = new String[] { " Alexandre ", " Maria ", " Anderson " };
+    // iterarNomes(alunos, 0);
+    // }
+
+    // static void iterarNomes(String[] nomes, Integer i) {
+    // System.out.println("Aluno: " + nomes[i]);
+    //
+    // if (++i < nomes.length) {
+    // iterarNomes(nomes, i);
+    // }
+    // }
 
     static Integer receberNumeroInteiro(String texto, Scanner entrada) {
         imprimirContinuarMesmaLinha(texto);
@@ -47,8 +58,13 @@ public class RetornandoValores {
     }
 
     static void iterarEExibirPosicoesDoVetorString(String[] vetor) {
-        for (int i = 0; i < vetor.length; i++) {
-            System.out.println(" - " + i + " - " + vetor[i]);
+        iterarEExibirPosicoesDoVetorString(vetor, 0);
+    }
+
+    static void iterarEExibirPosicoesDoVetorString(String[] vetor, Integer i) {
+        System.out.println(" - " + i + " - " + vetor[i]);
+        if (++i < vetor.length) {
+            iterarEExibirPosicoesDoVetorString(vetor, i);
         }
     }
 
@@ -76,14 +92,3 @@ public class RetornandoValores {
     }
 
 }
-
-// public static void main(String[] args) {
-// Double[] premissaInicial = new Double[] { 50.0, 100.0 };
-// Double proporcao = 20.0;
-// Double resultadoFinal = regraDeTres(premissaInicial, proporcao);
-// System.out.println("Resultado " + resultadoFinal);
-// }
-// static Double regraDeTres(Double[] premisssa, Double proporcao) {
-// Double resultado = (premisssa[0] * proporcao) / premisssa[1];
-// return resultado;
-// }}

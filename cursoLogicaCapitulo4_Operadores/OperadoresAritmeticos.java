@@ -4,22 +4,21 @@ import java.util.Scanner;
 
 public class OperadoresAritmeticos {
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
+        try (Scanner entrada = new Scanner(System.in)) {
+            System.out.println(" Digite um numero ");
+            Integer numeroRecebido = entrada.nextInt();
 
-        System.out.println(" Digite um numero ");
-        Integer numeroRecebido = entrada.nextInt();
+            System.out.println(" Digite um numero ");
+            Integer segundoNumeroRecebido = entrada.nextInt();
+   
+            Integer adicao = numeroRecebido + segundoNumeroRecebido;
+            Integer subtracao = numeroRecebido - segundoNumeroRecebido;
+            Integer multiplicacao = numeroRecebido * segundoNumeroRecebido;
+            Integer divisao = numeroRecebido / segundoNumeroRecebido;
+            
+            System.out.println(adicao + " / " + subtracao + " / " + multiplicacao + " / " + divisao);
+        }
 
-        System.out.println(" Digite um numero ");
-        Integer segundoNumeroRecebido = entrada.nextInt();
-    
-        Integer adicao = numeroRecebido + segundoNumeroRecebido;
-        Integer subtracao = numeroRecebido - segundoNumeroRecebido;
-        Integer multiplicacao = numeroRecebido * segundoNumeroRecebido;
-        Integer divisao = numeroRecebido / segundoNumeroRecebido;
-        
-        System.out.println(adicao + " / " + subtracao + " / " + multiplicacao + " / " + divisao);
-        
-        
         Integer precedencia =( 1 + 1 )* 5 * 5;
 
         System.out.println(precedencia);
