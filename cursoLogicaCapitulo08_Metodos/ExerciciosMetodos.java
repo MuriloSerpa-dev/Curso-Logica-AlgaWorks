@@ -15,6 +15,7 @@ public class ExerciciosMetodos {
                     System.out.println(" Tamanho invalido! XXX");
                 }
             } while (tamanho < 1 && tamanho > 15);
+
             Integer[] notaUm = new Integer[tamanho];
             Integer[] notaDois = new Integer[tamanho];
             Integer[] soma = new Integer[tamanho];

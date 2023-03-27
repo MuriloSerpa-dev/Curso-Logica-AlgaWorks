@@ -7,49 +7,50 @@ public class Recursividade {
         Scanner entrada = new Scanner(System.in);
 
         imprimirTraco();
+        String cursoEscolhido = receberCursoDoUsuario(entrada);
+        imprimirTraco();
+
+        String FormaPagamentoEscolhido = receberFormaDePagamentoDoUsuario(entrada);
+        imprimirTraco();
+
+        imprimir(
+                "Curso escolhido foi " + cursoEscolhido + " / forma de pagamento é: " + FormaPagamentoEscolhido);
+                entrada.close();
+    }
+
+    // ==================================================================================
+
+    static String receberFormaDePagamentoDoUsuario(Scanner entrada) {
+        String[] formaDePagamento = new String[] { "Cartão", "Boleto" };
+        iterarEExibirPosicoesDoVetorString(formaDePagamento);
+
+        Integer pagamentoEscolhido = receberIndiceValidoDoUsuario(formaDePagamento, "Forma de pagamento escolhida é:",
+                entrada);
+        return formaDePagamento[pagamentoEscolhido];
+    }
+
+    static String receberCursoDoUsuario(Scanner entrada) {
+
         String[] curso = new String[] { "Java EE", "Spring", "Java OO Avançado" };
 
         imprimir("Escolha o curso desejado");
 
         iterarEExibirPosicoesDoVetorString(curso);
 
-        Integer posicaoEScolhidaCurso = receberNumeroInteiro(" O curso desejado é: ", entrada);
-
-        Boolean posicaoValida = verificarPosicaoEscolhida(posicaoEScolhidaCurso, curso);
-
-        if (!posicaoValida) {
-            encerrarProgramaDaPosicaoInvalida();
-        }
-        imprimirTraco();
-        String[] formaDePagamento = new String[] { "Cartão", "Boleto" };
-
-        // imprimirContinuarMesmaLinha(" Digite a forma de pagamento desejada: ");
-        iterarEExibirPosicoesDoVetorString(formaDePagamento);
-
-        Integer pagamentoEscolhido = receberNumeroInteiro(" Digite a forma de pagamento escolhida", entrada);
-        posicaoValida = verificarPosicaoEscolhida(pagamentoEscolhido, formaDePagamento);
-        if (!posicaoValida) {
-            encerrarProgramaDaPosicaoInvalida();
-        }
-        String cursoEscolhido = curso[posicaoEScolhidaCurso];
-        String FormaPagamentoEscolhido = formaDePagamento[pagamentoEscolhido];
-
-        imprimirTraco();
-
-        imprimir(
-                "Curso escolhido foi " + cursoEscolhido + " / forma de pagamento é: " + FormaPagamentoEscolhido);
+        Integer posicaoCursoEscolhido = receberIndiceValidoDoUsuario(curso, " O curso que você deseja é o: ", entrada);
+        return curso[posicaoCursoEscolhido];
     }
-    // String[] alunos = new String[] { " Alexandre ", " Maria ", " Anderson " };
-    // iterarNomes(alunos, 0);
-    // }
 
-    // static void iterarNomes(String[] nomes, Integer i) {
-    // System.out.println("Aluno: " + nomes[i]);
-    //
-    // if (++i < nomes.length) {
-    // iterarNomes(nomes, i);
-    // }
-    // }
+    static Integer receberIndiceValidoDoUsuario(String[] vetor, String texto, Scanner entrada) {
+        Integer posicaoEscolhida = receberNumeroInteiro(texto, entrada);
+
+        Boolean posicaoValida = verificarPosicaoEscolhida(posicaoEscolhida, vetor);
+
+        if (!posicaoValida) {
+            encerrarProgramaDaPosicaoInvalida();
+        }
+        return posicaoEscolhida;
+    }
 
     static Integer receberNumeroInteiro(String texto, Scanner entrada) {
         imprimirContinuarMesmaLinha(texto);
@@ -62,7 +63,7 @@ public class Recursividade {
     }
 
     static void iterarEExibirPosicoesDoVetorString(String[] vetor, Integer i) {
-        System.out.println(" - " + i + " - " + vetor[i]);
+        System.out.println(" [ " + i + " ] " + vetor[i]);
         if (++i < vetor.length) {
             iterarEExibirPosicoesDoVetorString(vetor, i);
         }

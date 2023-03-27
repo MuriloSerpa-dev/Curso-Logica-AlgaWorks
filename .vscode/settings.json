@@ -1,4 +1,15 @@
 {
     "workbench.preferredDarkColorTheme": "Default Light+ Experimental",
-    "workbench.colorTheme": "GitHub Dark Colorblind (Beta)"
+    "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "cursoLogicaCapitulo11_BibliotecaEFrameworks/libs/commons-email-1.5.jar",
+        "cursoLogicaCapitulo11_BibliotecaEFrameworks/libs/javax.mail.jar",
+        "cursoLogicaCapitulo11_BibliotecaEFrameworks/libs/activation-1.1.1.jar",
+        "cursoLogicaCapitulo11_BibliotecaEFrameworks/libs/javax.mail-api-1.6.2.jar",
+        "cursoLogicaCapitulo11_BibliotecaEFrameworks/libs/javax.mail-1.4.5-rc1-javadoc.jar",
+        "cusoLogicaCapitulo11_UsandoCodigosDeTerceiros/libs/activation-1.1.1.jar",
+        "cusoLogicaCapitulo11_UsandoCodigosDeTerceiros/libs/commons-email-1.5.jar",
+        "cusoLogicaCapitulo11_UsandoCodigosDeTerceiros/libs/javax.mail-1.6.2.jar"
+    ]
 }
