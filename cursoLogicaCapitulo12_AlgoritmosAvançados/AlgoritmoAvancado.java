@@ -2,35 +2,48 @@ package cursoLogicaCapitulo12_AlgoritmosAvançados;
 
 public class AlgoritmoAvancado {
     public static void main(String[] args) {
-        ListaAlunos lista = new ListaAlunos();
+        ListaAlunos listaAlunos = new ListaAlunos();
 
-        Aluno aluno = new Aluno();
-        aluno.nome = "João";
-        lista.adicionar(aluno);
+        Aluno aluno1 = new Aluno();
+        aluno1.nome = "Thiago ";
+        listaAlunos.adicionar(aluno1);
 
-         aluno = new Aluno();
-        aluno.nome = "Maria";
-        lista.adicionar(aluno);
+        Aluno aluno2 = new Aluno();
+        aluno2.nome = "Maria ";
+        listaAlunos.adicionar(aluno2);
 
-         aluno = new Aluno();
-        aluno.nome = "Alexandre";
-        lista.adicionar(aluno);
+        Aluno aluno3 = new Aluno();
+        aluno3.nome = "Alexandre ";
+        listaAlunos.adicionar(aluno3);
 
-         aluno = new Aluno();
-        aluno.nome = "Normandes";
-        lista.adicionar(aluno);
+        Aluno aluno4 = new Aluno();
+        aluno4.nome = "Normandes ";
+        listaAlunos.adicionar(aluno4);
 
-         aluno = new Aluno();
-        aluno.nome = "Joao";
-        lista.adicionar(aluno);
+        Aluno aluno5 = new Aluno();
+        aluno5.nome = "João ";
+        listaAlunos.adicionar(aluno5);
 
-         aluno = new Aluno();
-        aluno.nome = "Tiago";
-        lista.adicionar(aluno);
+        iterar(listaAlunos);
+        listaAlunos.ordenar();
 
-        for (int i = 0; i < lista.tamanho(); i++) {
-            Aluno a = lista.obter(i);
-            System.out.println("Aluno : " + a.nome);
+        iterar(listaAlunos);
+        listaAlunos.remover(aluno3);
+
+        iterar(listaAlunos);
+
+    }
+
+    static void iterar(ListaAlunos listaAlunos) {
+        for (int i = 0; i < listaAlunos.tamanho(); i++) {
+            Aluno a = listaAlunos.obter(i);
+            if (a != null) {
+                System.out.println("Aluno: " + a.nome);
+            } else {
+                System.out.println("Aluno sem nome");
+            }
         }
+        System.out.println("------------------------------");
+
     }
 }
