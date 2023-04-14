@@ -1,5 +1,10 @@
 <h1>Lógica de Programação com Java</h1>
-Curso Logica Com Java da AlgaWorks
+
+![Para-Web_Logica-de-Programação](https://user-images.githubusercontent.com/65874269/232111225-2ea3add6-1674-45b7-a28d-1eb057f1ce61.png)
+
+
+
+<h3>Curso Logica Com Java da AlgaWorks</h3>
 
 <h3>Description</h3>
 
